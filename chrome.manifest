@@ -1,0 +1,5 @@
+content	zotero-onenote-plugin				content/
+locale	zotero-onenote-plugin	en-US		locale/en-US/
+skin	zotero-onenote-plugin	default		skin/
+
+overlay	chrome://zotero/content/zoteroPane.xul	chrome://zotero-onenote-plugin/content/overlay.xul

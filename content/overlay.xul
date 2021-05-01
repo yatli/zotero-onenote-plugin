@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://zotero-onenote-plugin/skin/overlay.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://zotero-onenote-plugin/locale/zotero-onenote-plugin.dtd">
+
+<overlay id="zotero-onenote-plugin-overlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <tabs id="zotero-editpane-tabs" class="zotero-editpane-tabs">
+    <tab id="zotero-editpane-onenote-tab" label="&zotero.onenote.tablabel;"/>
+  </tabs>
+	
+  <!-- chrome/content/zotero/itemPane.xul line 72 -->
+  <tabpanels id="zotero-view-item" class="zotero-view-item" onselect="Zotero.OnenotePlugin.getOnenoteView();" onfocus="Zotero.OnenotePlugin.getOnenoteView();">
+    <tabpanel id="onenote-pane" class="onenote-pane" orient="vertical">
+      <iframe id="zotero-onenote-box" flex="1" style="padding: 0 1em; background:white;width:100%;height:100%" overflow="auto" type="content" sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin"/>
+    </tabpanel>
+  </tabpanels>
+	<!-- Include the main extension logic -->
+  <script src="chrome://zotero/content/include.js"/>
+  <script src="chrome://zotero-onenote-plugin/content/webpack.js"/>
+  <script src="chrome://zotero-onenote-plugin/content/OnenotePlugin.js"/>
+</overlay>
